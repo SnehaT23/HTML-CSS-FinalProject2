@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Responsive E-commerce Product Page</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+
+<div class="container my-4">
+  <div class="row g-4">
+    <!-- Product Carousel -->
+    <div class="col-lg-5 col-md-6 mx-auto">
+      <div id="productCarousel" class="carousel slide shadow-sm" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="headphones1.jpeg" class="d-block w-100 img-fluid product-img" alt="Product 1">
+          </div>
+          <div class="carousel-item">
+            <img src="headphones2.jpeg" class="d-block w-100 img-fluid product-img" alt="Product 2">
+          </div>
+          <div class="carousel-item">
+            <img src="headphones3.jpeg" class="d-block w-100 img-fluid product-img" alt="Product 3">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Product Details -->
+    <div class="col-lg-7 col-md-6">
+      <h2 id="productName">Product Name</h2>
+      <p class="text-muted" id="productBrand">Brand</p>
+      <h4 class="text-success" id="productPrice">$0.00</h4>
+      <p id="productDesc"></p>
+
+      <!-- Quantity & Add to Cart -->
+      <div class="d-flex align-items-center mb-3">
+        <input type="number" id="quantity" class="form-control me-3" value="1" min="1" style="width:90px;">
+        <button id="addToCart" class="btn btn-primary btn-lg">Add to Cart</button>
+      </div>
+      <div id="cartMessage" class="text-success fw-bold"></div>
+
+      <!-- Average Rating -->
+      <div class="mt-3">
+        <h5>Average Rating</h5>
+        <span id="averageStars" class="text-warning fs-4">★★★★★</span>
+        <small id="reviewCount" class="text-muted">(0 reviews)</small>
+      </div>
+    </div>
+  </div>
+
+  <!-- Reviews Section -->
+  <hr class="my-4">
+  <div class="row">
+    <div class="col-lg-8 mx-auto">
+      <h4 class="mb-3">Customer Reviews</h4>
+      <div id="reviewsList" class="mb-4"></div>
+
+      <!-- Add Review -->
+      <div class="card p-3">
+        <h5>Add a Review</h5>
+        <div id="starInput" class="mb-2">
+          <span class="star" data-value="1">&#9734;</span>
+          <span class="star" data-value="2">&#9734;</span>
+          <span class="star" data-value="3">&#9734;</span>
+          <span class="star" data-value="4">&#9734;</span>
+          <span class="star" data-value="5">&#9734;</span>
+        </div>
+        <textarea id="reviewText" class="form-control mb-2" placeholder="Write your review"></textarea>
+        <button id="submitReview" class="btn btn-success">Submit Review</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap & jQuery -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
