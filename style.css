@@ -1,0 +1,16 @@
+.product-img {
+  max-height: 400px;       /* Smaller image height */
+  object-fit: cover;       /* Crop nicely */
+}
+
+.star {
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #ccc;
+  transition: color 0.2s;
+}
+.star.active,
+.star:hover,
+.star:hover ~ .star {
+  color: #f5c518;
+}
